@@ -1,0 +1,81 @@
+/* ── HERO ── */
+#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 60px;
+  background: transparent;
+}
+
+.hero-name {
+  font-family: 'Georgia', serif;
+  font-size: clamp(48px, 8vw, 96px);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  display: flex;
+  gap: 0.06em;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.hero-name .letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(32px);
+  animation: letterUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letterUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-sub {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 19px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+  margin-bottom: 24px;
+}
+
+.hero-para {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 520px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--muted);
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards, bob 2s ease-in-out infinite;
+  transition: color 0.2s;
+}
+
+.scroll-btn:hover { color: var(--dark); }
+
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}

@@ -1,0 +1,128 @@
+/* ── FEATURED WORK ── */
+#work {
+  padding: 120px 64px;
+  background: transparent;
+}
+
+.work-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.work-header h2 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.work-header p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* Grid */
+.work-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.work-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--lavender-mid);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(100, 97, 170, 0.12);
+}
+
+.work-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.work-thumb img,
+.site-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.work-body {
+  padding: 20px 22px 24px;
+}
+
+.work-tag {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.work-title {
+  font-family: 'Georgia', serif;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  color: var(--dark);
+}
+
+/* View all link */
+.work-footer {
+  text-align: center;
+  margin-top: 56px;
+}
+
+.work-footer a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 1px solid var(--lavender-mid);
+  padding-bottom: 3px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.work-footer a:hover {
+  color: var(--dark);
+  border-color: var(--dark);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #work { padding: 80px 32px; }
+  .work-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+}
+
+@media (max-width: 600px) {
+  .work-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,215 @@
+/* ── PROJECT PAGE ── */
+.project-header {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 140px 64px 64px;
+}
+
+.project-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 48px;
+  transition: color 0.2s;
+}
+
+.project-back:hover { color: var(--dark); }
+
+.project-header h1 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(28px, 5vw, 56px);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.project-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--lavender-mid);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.meta-value {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--dark);
+}
+
+.meta-value a {
+  color: var(--dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s;
+}
+
+.meta-value a:hover { opacity: 0.6; }
+
+/* Main image */
+.project-main-img {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px 64px;
+}
+
+.project-main-img img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--lavender-mid);
+  border-radius: 4px;
+  display: block;
+}
+
+.project-main-img .img-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--lavender);
+  border: 1px solid var(--lavender-mid);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* Description */
+.project-body {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 64px 64px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.project-body h2 {
+  font-family: 'Georgia', serif;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--dark);
+}
+
+.project-body p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.project-body p:last-child { margin-bottom: 0; }
+
+/* Gallery */
+.project-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 64px 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  background: var(--lavender);
+  border: 1px solid var(--lavender-mid);
+  border-radius: 4px;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.gallery-item.tall { aspect-ratio: 3 / 4; }
+
+/* Live link button */
+.project-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--dark);
+  border-radius: 999px;
+  padding: 12px 28px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  width: fit-content;
+}
+
+.project-link-btn:hover { opacity: 0.75; }
+
+.project-link-btn.outline {
+  background: transparent;
+  color: var(--dark);
+  border: 1.5px solid var(--dark);
+}
+
+.project-link-btn.outline:hover { background: var(--dark); color: #fff; opacity: 1; }
+
+.project-btns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+/* WIP notice */
+.project-wip {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 64px 100px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.project-wip--top {
+  padding: 80px 64px 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-header,
+  .project-main-img,
+  .project-body,
+  .project-gallery { padding-left: 32px; padding-right: 32px; }
+
+  .project-body { grid-template-columns: 1fr; gap: 24px; }
+  .project-gallery { grid-template-columns: 1fr; }
+}

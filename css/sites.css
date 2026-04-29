@@ -1,0 +1,100 @@
+/* ── SITES PAGE ── */
+.page-hero {
+  min-height: 36vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 64px 80px;
+}
+
+.page-hero h1 {
+  font-family: 'Georgia', serif;
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: -0.02em;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+
+.page-hero p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+/* Grid */
+.sites-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 64px 120px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.site-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--lavender-mid);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(100, 97, 170, 0.12);
+}
+
+.site-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--lavender);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.site-body {
+  padding: 22px 24px 26px;
+}
+
+.site-tag {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.site-title {
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+.site-desc {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sites-grid { grid-template-columns: 1fr; padding: 0 32px 80px; }
+  .page-hero  { padding: 100px 32px 60px; }
+}
